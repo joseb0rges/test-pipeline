@@ -1,0 +1,23 @@
+image: node
+
+stages:
+  - test
+  - package
+  - deploy
+
+test site:
+  stage: test
+  before_script:
+    - npm install -g broken-link-checker wait-on
+  script:
+    - npm install && npm run start &
+    - wait-on http://localhost:3000/ --timeout 90000
+    - blc --recursive --exclude-external http://localhost:3000
+
+
+
+
+
+  
+
+
