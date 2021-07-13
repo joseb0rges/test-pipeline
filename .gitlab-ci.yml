@@ -12,7 +12,7 @@ test site:
   script:
     - npm install && npm run start &
     - wait-on http://localhost:3000/ --timeout 90000
-    - blc --recursive --exclude-external http://localhost:3000
+    - curl http://localhost:3000
 
 
 
