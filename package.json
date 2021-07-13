@@ -4,12 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "scan": "snyk test"
+  },
+  "devDependencies": {
+    "docusaurus": "^1.4.0"
+  },
+  "dependencies": {
+    "snyk": "^1.103.3"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johnpapa/node-hello.git"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
